@@ -12,7 +12,7 @@ import Main from './components/Main';
 import PhotoGrid from './components/PhotoGrid';
 import Single from './components/Single';
 
-const route = (
+const router = (
   <Router history={browserHistory}>
     <Route path="/" component={Main}>
       // Children
@@ -23,4 +23,4 @@ const route = (
 )
 
 
-render(route, document.getElementById('root'));
+render(router, document.getElementById('root'));
