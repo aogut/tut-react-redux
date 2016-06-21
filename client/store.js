@@ -6,11 +6,11 @@ import { browserHistory } from 'react-router';
 import rootReducer from './reducers/index';
 
 import comments from './data/comments';
-import comments from './data/posts';
+import posts from './data/posts';
 
 // default data
 const defaultState = {
-  post,
+  posts,
   comments
 };
 

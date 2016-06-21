@@ -3,6 +3,8 @@ import { render } from 'react-dom';
 
 // react router dependencies
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';   // react redux binding
+import store, { history } from './store';
 
 // css
 import css from './styles/style.styl';
@@ -13,13 +15,15 @@ import PhotoGrid from './components/PhotoGrid';
 import Single from './components/Single';
 
 const router = (
-  <Router history={browserHistory}>
-    <Route path="/" component={Main}>
-      // Children
-      <IndexRoute component={PhotoGrid}></IndexRoute>
-      <Route path="/view/:postId" component={Single}></Route>
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <Router history={history}>  // swap from browserHistory
+      <Route path="/" component={Main}>
+        // Children
+        <IndexRoute component={PhotoGrid}></IndexRoute>
+        <Route path="/view/:postId" component={Single}></Route>
+      </Route>
+    </Router>
+  </Provider>
 )
 
 
