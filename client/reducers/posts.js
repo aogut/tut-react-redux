@@ -4,8 +4,8 @@
 // (previousState, action) => nextState
 
 function posts(state = [], action) {
-  console.log('----- post reducer -----');
-  console.log(state, action);
+  console.log();
+  console.log('> post reducer -----', state, action);
 
   switch(action.type) {
     case 'INCREMENT_LIKES':
