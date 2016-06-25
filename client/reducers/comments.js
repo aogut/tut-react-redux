@@ -1,5 +1,5 @@
 function comments(state = [], action) {
-  console.log('> comment reducer --', state, action);
+  console.log('> comment reducer --', state);
   if (typeof action.postId !== 'undefined') {
     return {
       // current state
@@ -28,7 +28,5 @@ function postComment(state=[], action) {
       return state;
   }
 }
-
-
 
 export default comments;

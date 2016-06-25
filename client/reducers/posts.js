@@ -4,20 +4,17 @@
 // (previousState, action) => nextState
 
 function posts(state = [], action) {
-  console.log();
-  console.log('> post reducer -----', state, action);
+  console.log('> post reducer -----', state);
 
   switch(action.type) {
     case 'INCREMENT_LIKES':
       console.log('Incrementing likes');
       const i = action.index;
-      console.log("Old State", state[i]);
       var newState =  [
         ...state.slice(0,i), // before the one we are updating
         {...state[i], likes: state[i].likes + 1}, // combining
         ...state.slice(i+1) // after the one we are updating
       ];
-      console.log("New State", newState[i]);
       return newState;
     default:
       return state;

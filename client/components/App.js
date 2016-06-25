@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../actions/actionCreators';
 import Main from './Main';
 
-// expose state data to UI
+// expose state data to UI via props
 function mapStateToProps(state) {
     return {
       posts: state.posts,
@@ -13,7 +13,7 @@ function mapStateToProps(state) {
     }
 }
 
-// bind action creators to dispatch
+// expose action creators to UI via props
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(actionCreators, dispatch);
 }
